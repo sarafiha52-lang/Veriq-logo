@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veriq - Quantum & AI Powered Image/Video Verification Ecosystem</title>
+    <title>Veriq Ecosystem - Official Project & Token Portal</title>
+    <!-- Etherscan Verification Verification Asset Mapping -->
+    <link rel="icon" type="image/svg+xml" href="logo.svg" sizes="32x32">
     <style>
-        /* Modern Cyberpunk & Dark Theme Design */
+        /* Cyberpunk Dark Interface Design */
         * {
             margin: 0;
             padding: 0;
@@ -20,18 +22,24 @@
             line-height: 1.6;
         }
 
-        /* Navbar */
+        /* Navigation Interface */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background-color: rgba(11, 15, 25, 0.8);
+            background-color: rgba(11, 15, 25, 0.95);
             border-bottom: 1px solid rgba(56, 189, 248, 0.2);
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(10px);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .logo {
@@ -64,36 +72,42 @@
             color: #38bdf8;
         }
 
-        /* Sections General */
+        /* Content Sections */
         section {
-            padding: 100px 8%;
+            padding: 90px 8%;
         }
 
         .section-title {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 50px;
+            margin-bottom: 15px;
             font-weight: 700;
-            letter-spacing: 1px;
         }
 
         .section-title span {
             color: #38bdf8;
         }
 
-        /* Hero Section */
+        .section-subtitle {
+            text-align: center;
+            color: #9ca3af;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        /* Hero Element */
         .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 140px 20px;
+            padding: 130px 20px;
             background: radial-gradient(circle at center, #111c35 0%, #060913 70%);
         }
 
         .hero h1 {
-            font-size: 54px;
+            font-size: 52px;
             margin-bottom: 20px;
             font-weight: 800;
         }
@@ -106,11 +120,11 @@
         .hero p {
             font-size: 19px;
             color: #9ca3af;
-            max-width: 700px;
+            max-width: 750px;
             margin-bottom: 35px;
         }
 
-        /* Buttons & Badges */
+        /* Buttons & Actions */
         .btn-container {
             display: flex;
             gap: 15px;
@@ -149,41 +163,64 @@
             color: #ffffff;
         }
 
-        /* Contract Address Section */
+        /* Etherscan Verification Information Architecture */
         .contract-box {
-            background: rgba(17, 24, 39, 0.7);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            padding: 25px;
-            border-radius: 8px;
-            max-width: 700px;
-            margin: 0 auto 40px auto;
+            background: rgba(17, 24, 39, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 750px;
+            margin: 0 auto;
             text-align: center;
         }
 
         .contract-label {
-            font-size: 12px;
+            font-size: 13px;
             color: #38bdf8;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             font-weight: bold;
         }
 
         .contract-string {
             font-family: 'Courier New', Courier, monospace;
             color: #38bdf8;
-            font-size: 15px;
+            font-size: 16px;
             word-break: break-all;
             background: #0b0f19;
-            padding: 12px;
-            border-radius: 4px;
+            padding: 14px;
+            border-radius: 6px;
             border: 1px solid #1f2937;
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
-        /* Token Utility Section */
+        .spec-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .spec-table th, .spec-table td {
+            padding: 10px;
+            border-bottom: 1px solid #1f2937;
+        }
+
+        .spec-table th {
+            color: #9ca3af;
+        }
+
+        .spec-table td {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* Token Core Utility Grid */
         .utility-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -215,7 +252,7 @@
             font-size: 15px;
         }
 
-        /* Roadmap Section */
+        /* Core Roadmap System */
         .roadmap-timeline {
             position: relative;
             max-width: 800px;
@@ -276,7 +313,46 @@
             font-size: 14px;
         }
 
-        /* Footer & Socials */
+        /* Founders & Leadership Information Area */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .team-card {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            min-width: 280px;
+            max-width: 350px;
+        }
+
+        .team-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .team-card .role {
+            color: #38bdf8;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .team-card p {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer Infrastructure & Professional Profiles Links */
         footer {
             background-color: #0b0f19;
             padding: 60px 8% 30px 8%;
@@ -294,14 +370,10 @@
         .social-icon {
             color: #ffffff;
             background: #1f2937;
-            width: 55px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 20px;
+            padding: 10px 24px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 14px;
             transition: all 0.3s ease;
             border: 1px solid rgba(56, 189, 248, 0.1);
@@ -319,42 +391,5 @@
             font-size: 14px;
         }
 
-        /* Responsive Architecture */
+        /* Adaptive Architecture Layout */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 38px; }
-            .nav-links { display: none; }
-            .roadmap-timeline::after { left: 31px; }
-            .roadmap-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left; }
-            .roadmap-item::after { left: 22px; }
-            .left { left: 0; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header Navigation -->
-    <header>
-        <div class="logo">VERIQ</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#utility">Token Utility</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-            <li><a href="#contract">Contract</a></li>
-        </ul>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h1>Quantum & AI Powered <span>Media Verification</span></h1>
-        <p>Veriq (VRQ) is an advanced decentralized utility ecosystem built to analyze, detect, and stamp the authenticity of AI-generated photos and videos using cutting-edge cryptographic protocols.</p>
-        <div class="btn-container">
-            <a href="#utility" class="btn">Explore Utility</a>
-            <a href="https://github.com/sarafiha52-lang/Veriq-logo/edit/main/VERIQ%20Whitepaper.pdf" target="_blank" class="btn btn-secondary">Read Whitepaper</a>
-        </div>
-    </section>
-
-    <!-- Contract Address Section -->
-    <section id="contract" style="padding-top: 20px; padding-bottom: 40px;">
-        <div class="contract-box">
-            <div class="contract-label">Official Verified Contract Address</div>
-            <span class="contract-string">0xFa3Fa8BD0D10B028C5306d8e24d8Af4B20d14358</span>
