@@ -4,42 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veriq Ecosystem - Official Project & Token Portal</title>
-    <!-- Etherscan Verification Verification Asset Mapping -->
     <link rel="icon" type="image/svg+xml" href="logo.svg" sizes="32x32">
     <style>
-        /* Cyberpunk Dark Interface Design */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
         }
 
         body {
             background-color: #060913;
             color: #ffffff;
             line-height: 1.6;
+            padding: 0;
+            margin: 0;
         }
 
-        /* Navigation Interface */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background-color: rgba(11, 15, 25, 0.95);
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            background-color: #0b0f19;
+            border-bottom: 1px solid #1f2937;
         }
 
         .logo {
@@ -47,13 +35,11 @@
             font-weight: 800;
             color: #38bdf8;
             letter-spacing: 1.5px;
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            align-items: center;
         }
 
         .nav-links li {
@@ -65,23 +51,24 @@
             text-decoration: none;
             font-size: 15px;
             font-weight: 500;
-            transition: color 0.3s;
         }
 
         .nav-links a:hover {
             color: #38bdf8;
         }
 
-        /* Content Sections */
         section {
-            padding: 90px 8%;
+            padding: 80px 8%;
+            display: block;
+            clear: both;
         }
 
         .section-title {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             font-weight: 700;
+            color: #ffffff;
         }
 
         .section-title span {
@@ -91,71 +78,61 @@
         .section-subtitle {
             text-align: center;
             color: #9ca3af;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             font-size: 16px;
         }
 
-        /* Hero Element */
         .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             text-align: center;
-            padding: 130px 20px;
-            background: radial-gradient(circle at center, #111c35 0%, #060913 70%);
+            padding: 120px 8%;
+            background: #0b132b;
         }
 
         .hero h1 {
-            font-size: 52px;
+            font-size: 48px;
             margin-bottom: 20px;
             font-weight: 800;
+            color: #ffffff;
         }
 
         .hero h1 span {
             color: #38bdf8;
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
         }
 
         .hero p {
             font-size: 19px;
             color: #9ca3af;
             max-width: 750px;
-            margin-bottom: 35px;
+            margin: 0 auto 35px auto;
         }
 
-        /* Buttons & Actions */
         .btn-container {
             display: flex;
             gap: 15px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
             background-color: #38bdf8;
             color: #060913;
-            padding: 14px 32px;
+            padding: 12px 30px;
             border: none;
             border-radius: 6px;
             font-size: 16px;
             font-weight: 700;
             cursor: pointer;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+            display: inline-block;
         }
 
         .btn:hover {
             background-color: #0ea5e9;
-            transform: translateY(-2px);
         }
 
         .btn-secondary {
             background-color: transparent;
             color: #38bdf8;
             border: 2px solid #38bdf8;
-            box-shadow: none;
         }
 
         .btn-secondary:hover {
@@ -163,10 +140,9 @@
             color: #ffffff;
         }
 
-        /* Etherscan Verification Information Architecture */
         .contract-box {
-            background: rgba(17, 24, 39, 0.85);
-            border: 1px solid rgba(56, 189, 248, 0.25);
+            background: #0f172a;
+            border: 1px solid #1e293b;
             padding: 30px;
             border-radius: 12px;
             max-width: 750px;
@@ -184,18 +160,17 @@
         }
 
         .contract-string {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: monospace;
             color: #38bdf8;
             font-size: 16px;
             word-break: break-all;
-            background: #0b0f19;
+            background: #060913;
             padding: 14px;
             border-radius: 6px;
             border: 1px solid #1f2937;
             display: block;
             margin-bottom: 20px;
             font-weight: bold;
-            letter-spacing: 0.5px;
         }
 
         .spec-table {
@@ -203,11 +178,10 @@
             margin-top: 20px;
             border-collapse: collapse;
             text-align: left;
-            font-size: 14px;
         }
 
         .spec-table th, .spec-table td {
-            padding: 10px;
+            padding: 12px;
             border-bottom: 1px solid #1f2937;
         }
 
@@ -220,25 +194,21 @@
             font-weight: 600;
         }
 
-        /* Token Core Utility Grid */
         .utility-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .utility-card {
             background-color: #0f172a;
-            padding: 35px;
+            padding: 30px;
             border-radius: 12px;
             border: 1px solid #1e293b;
-            transition: all 0.3s ease;
-        }
-
-        .utility-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.05);
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
         }
 
         .utility-card h3 {
@@ -252,54 +222,17 @@
             font-size: 15px;
         }
 
-        /* Core Roadmap System */
         .roadmap-timeline {
-            position: relative;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .roadmap-timeline::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: #1e293b;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
-
-        .roadmap-item {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .roadmap-item::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            right: -8px;
-            background-color: #060913;
-            border: 3px solid #38bdf8;
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left { left: 0; text-align: right; }
-        .right { left: 50%; }
-        .right::after { left: -8px; }
-
         .roadmap-content {
-            padding: 20px 30px;
+            padding: 20px;
             background-color: #0f172a;
-            position: relative;
             border-radius: 8px;
             border: 1px solid #1e293b;
+            margin-bottom: 20px;
         }
 
         .roadmap-content h3 {
@@ -313,12 +246,10 @@
             font-size: 14px;
         }
 
-        /* Founders & Leadership Information Area */
         .team-grid {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .team-card {
@@ -327,7 +258,7 @@
             padding: 30px;
             border-radius: 12px;
             text-align: center;
-            min-width: 280px;
+            width: 100%;
             max-width: 350px;
         }
 
@@ -342,7 +273,6 @@
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 15px;
         }
 
@@ -352,10 +282,9 @@
             margin-bottom: 20px;
         }
 
-        /* Footer Infrastructure & Professional Profiles Links */
         footer {
             background-color: #0b0f19;
-            padding: 60px 8% 30px 8%;
+            padding: 40px 8%;
             border-top: 1px solid #1f2937;
             text-align: center;
         }
@@ -364,32 +293,89 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .social-icon {
             color: #ffffff;
             background: #1f2937;
-            padding: 10px 24px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(56, 189, 248, 0.1);
         }
 
         .social-icon:hover {
             background: #38bdf8;
             color: #060913;
-            transform: scale(1.05);
-            box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
         }
 
         footer p {
-            color: #4b5563;
+            color: #6b7280;
             font-size: 14px;
         }
 
-        /* Adaptive Architecture Layout */
         @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .nav-links { display: none; }
+            .utility-grid, .team-grid { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VERIQ</div>
+        <ul class="nav-links">
+            <li><a href="#contract">On-Chain Data</a></li>
+            <li><a href="#utility">Token Utility</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#team">Founders</a></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <h1>Quantum & AI Powered <span>Media Verification</span></h1>
+        <p>Veriq (VRQ) is a decentralized architecture engineered to detect, analyze, and stamp the integrity of synthetic media assets using next-generation cryptographic verification structures.</p>
+        <div class="btn-container">
+            <a href="#utility" class="btn">Explore Token Utility</a>
+            <a href="https://github.com" target="_blank" class="btn btn-secondary">Read Whitepaper</a>
+        </div>
+    </div>
+
+    <section id="contract">
+        <h2 class="section-title">Verified <span>On-Chain Parameters</span></h2>
+        <p class="section-subtitle">Extracted directly from the Ethereum Blockchain Architecture Protocols</p>
+        
+        <div class="contract-box">
+            <div class="contract-label">Official Smart Contract Address</div>
+            <span class="contract-string">0xFa3Fa8BD0D10B028C5306d8e24d8Af4B20d14358</span>
+            
+            <a href="https://etherscan.io" target="_blank" class="btn btn-secondary">Verify On Etherscan</a>
+            
+            <table class="spec-table">
+                <tr>
+                    <th>Specification Standard</th>
+                    <td>ERC-20 Compliant Protocol Token</td>
+                </tr>
+                <tr>
+                    <th>Blockchain Network</th>
+                    <td>Ethereum Mainnet Infrastructure</td>
+                </tr>
+                <tr>
+                    <th>Token Asset Name</th>
+                    <td>Veriq</td>
+                </tr>
+                <tr>
+                    <th>Token Asset Symbol</th>
+                    <td>VRQ</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="utility">
+        <h2 class="section-title">Ecosystem <span>Token Utility</span></h2>
+        <p class="section-subtitle">Core workflows driven natively by the VRQ project asset</p>
+        <div class="utility-grid">
